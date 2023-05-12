@@ -8,20 +8,7 @@ const { createToken } = require('../services/jwt');
 
 
 module.exports = {
-    getUsers: async (req, res) => {
-
-        // res.json(people)
-        try {
-            // make sure that any items are correctly URL encoded in the connection string
-            await sql.connect(sqlConfig)
-            const result = await sql.query`SELECT * FROM dummyusers `
-            res.json(result)
-        } catch (err) {
-            // ... error checks
-            console.log(err)
-        }
-
-    },
+   
 
     createUser: async (req, res) => {
         const details = req.body;
